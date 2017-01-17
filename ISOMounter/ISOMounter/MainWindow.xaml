@@ -1,0 +1,31 @@
+﻿<Window x:Class="ISOMounter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ISOMounter"
+        mc:Ignorable="d"
+        Title="ISO Mounter" Height="200" Width="350" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Button x:Name="btnSelect" Grid.Row="0" Click="btnSelect_Click">Select ISO file</Button>
+            <Label x:Name="lblFile" Grid.Row="1" VerticalContentAlignment="Center">Selected ISO:</Label>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="btnMount" Grid.Column="0" Margin="5" Click="btnMount_Click">Mount ISO</Button>
+            <Button x:Name="btnDismount" Grid.Column="1" Margin="5" Click="btnDismount_Click">Dismount ISO</Button>
+        </Grid>
+    </Grid>
+</Window>
